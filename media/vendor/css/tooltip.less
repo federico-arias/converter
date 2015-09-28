@@ -1,0 +1,49 @@
+span.reference { 
+    vertical-align:super; 
+    font-size:smaller;
+    position:relative;
+    cursor:pointer;
+
+    &:hover {
+        text-decoration:underline;
+    }
+
+    .tooltip {
+        min-width:200px;
+        visibility:hidden;
+        display:inline;
+        position:absolute;
+        text-align:center;
+        left:calc(-50px - 100%);
+        top: calc(-43.2px - 100% - 2px);
+        max-width:320px;
+        border-radius:4px;
+        background-color:@gob-azul;
+        color:white;
+        font-size:1.3em;
+        padding:5px 8px;
+
+        &:after {
+            top: 100%;
+            left: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-color: transparent;
+            border-top-color: steelblue;
+            border-width: 10px;
+            margin-left: -10px;
+        }
+        &:before {
+
+        }
+
+        a {
+            color:white !important;
+        }
+    }
+
+}

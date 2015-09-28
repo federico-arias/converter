@@ -1,0 +1,34 @@
+.accordion {
+    border:12px solid @gris-claro;
+    padding:12px;
+    width:100%;
+    max-width:650px;
+    margin:0 auto;
+
+    p {
+        margin-bottom:1em;
+    }
+
+    details > summary {
+        padding:10px;
+        height: 37px;
+        background-color:@gob-azul;
+        color:white;
+        cursor:pointer;
+        margin-bottom:12px;
+
+        &:hover,
+        &.red {
+            background-color:@gob-rojo;
+        }
+    }
+
+    details > :not(summary) {
+        display:none;
+    }
+
+
+    details:last-child > summary {
+        margin-bottom:0;
+    }
+}

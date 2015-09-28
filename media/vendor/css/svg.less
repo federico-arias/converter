@@ -1,0 +1,87 @@
+#percent {
+    margin-left:15%;
+}
+
+.tf-checklist .modal {
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translateX(-50%) translateY(-50%);
+    max-width:500px;
+    width:50%;
+    padding:30px 20px;
+    text-align:center;
+    background-color:steelblue;
+    color:white;
+    z-index:101;
+    display:none;
+    cursor:pointer;
+}
+
+.tf-checklist .feedback {
+    display:inherit;
+}
+
+.tf-checklist svg {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    margin-top: -20px;
+    left: 5px;
+    pointer-events: none;
+}
+
+.tf-checklist svg path {
+    stroke: #aaa;
+    stroke-width: 13px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+.tf-checklist {
+    font-size:1.5em;
+    font-family:gobCL, sans-serif;
+}
+
+.tf-checklist li input {
+    opacity:0;
+}
+
+.tf-checklist ul {
+    list-style:outside none none;
+    margin:0 auto;
+    position:relative;
+}
+
+.tf-checklist input[type='checkbox'] {
+    z-index:100;
+}
+
+.tf-checklist li {
+    margin:0;
+    padding:1em 0 1em 80px;
+    position:relative;
+}
+
+.tf-checklist input[type='checkbox'], 
+.tf-checklist label::before {
+    content:"";
+    left: 0px;
+    position: absolute;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    top: 50%;
+}
+
+.tf-checklist li label::before {
+    content:"";
+    border:1px solid black;
+}
+
+.tf-checklist input[type='checkbox']:checked label::before {
+    border:solid 1px #fff;
+}
